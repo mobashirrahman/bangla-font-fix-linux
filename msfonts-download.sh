@@ -29,35 +29,41 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+# We check if 'curl' and 'tar' exist. If not, we stop.
+if ! command -v curl &> /dev/null; then
+    echo "Error: 'curl' is not installed. Please install it and try again."
+    exit 1
+fi
+
+if ! command -v tar &> /dev/null; then
+    echo "Error: 'tar' is not installed. Please install it and try again."
+    exit 1
+fi
+
 # Define variables
-REPO_URL="https://github.com/tazihad/win10-fonts/archive/refs/heads/main.zip"
-DEST_DIR="$HOME/.local/share/fonts/msfonts"
-ZIP_FILE="$HOME/win10-fonts.zip"
+REPO_URL="https://github.com/tazihad/ttf-ms-fonts/releases/download/1.0.1/ttf-ms-win10.tar.xz"
+DEST_DIR="$HOME/.local/share/fonts"
+ARCHIVE_FILE="$HOME/ttf-ms-win10.tar.xz"
 
 # Create destination directory if it doesn't exist
 mkdir -p "$DEST_DIR"
 
-# Download the repository as a zip file
-echo "Downloading win10-fonts repository. Full Size 187M..."
-curl -L "$REPO_URL" -o "$ZIP_FILE"
+# Download the repository
+echo "Downloading fonts from $REPO_URL..."
+curl -L "$REPO_URL" -o "$ARCHIVE_FILE"
 
-# Extract the zip file
-echo "Extracting fonts..."
-unzip -q "$ZIP_FILE" -d "$HOME"
-
-# Move fonts to the destination directory
-echo "Moving fonts to $DEST_DIR..."
-mv "$HOME/win10-fonts-main"/* "$DEST_DIR"
+# Extract the tar.xz file
+# Note: We extract directly to the destination.
+# If the tarball contains a subfolder, fonts will be inside that subfolder within msfonts.
+echo "Extracting fonts to $DEST_DIR..."
+tar -xf "$ARCHIVE_FILE" -C "$DEST_DIR"
 
 # Cleanup
-rm "$ZIP_FILE"
-rm -rf "$HOME/win10-fonts-main"
+echo "Cleaning up..."
+rm "$ARCHIVE_FILE"
 
 # Refresh font cache (output hidden)
 echo "Refreshing font cache..."
 fc-cache -fv > /dev/null 2>&1
 
 echo "Fonts installed successfully in $DEST_DIR for $USER."
-
-
-
