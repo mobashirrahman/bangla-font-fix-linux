@@ -29,12 +29,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# We check if and 'tar' exist. If not, we stop.
-if ! command -v tar &> /dev/null; then
-    echo "Error: 'tar' is not installed. Please install it and try again."
-    exit 1
-fi
-
 # Define variables
 REPO_URL="https://github.com/tazihad/ttf-ms-fonts/releases/download/1.0.1/ttf-ms-win10.tar.xz"
 DEST_DIR="$HOME/.local/share/fonts"
