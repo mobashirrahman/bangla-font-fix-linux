@@ -29,12 +29,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# We check if 'curl' and 'tar' exist. If not, we stop.
-if ! command -v curl &> /dev/null; then
-    echo "Error: 'curl' is not installed. Please install it and try again."
-    exit 1
-fi
-
+# We check if and 'tar' exist. If not, we stop.
 if ! command -v tar &> /dev/null; then
     echo "Error: 'tar' is not installed. Please install it and try again."
     exit 1
