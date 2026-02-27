@@ -5,17 +5,17 @@ Open Terminal and copy-paste these commands.
 
 ### Install Bangla fonts
 ```
-curl -sSL https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/fonts-bangla-download.sh | sh
+curl -sSL https://raw.githubusercontent.com/mobashirrahman/bangla-font-fix-linux/main/fonts-bangla-download.sh | sh
 ```
 
 ### Make Kalpurush default Bangla font
 ```
-curl -sSL https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/bangla-kalpurush-default.sh | sh
+curl -sSL https://raw.githubusercontent.com/mobashirrahman/bangla-font-fix-linux/main/bangla-kalpurush-default.sh | sh
 ```
 
 ### Download Windows 10 fonts for linux
 ```
-curl -sSL https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/msfonts-download.sh | sh
+curl -sSL https://raw.githubusercontent.com/mobashirrahman/bangla-font-fix-linux/main/msfonts-download.sh | sh
 ```
 
 ## Extra Steps for Firefox Users

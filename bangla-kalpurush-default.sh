@@ -29,7 +29,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-CONFIG_URL="https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/50-bangla-kalpurush-default.conf"
+CONFIG_URL="https://raw.githubusercontent.com/mobashirrahman/bangla-font-fix-linux/main/50-bangla-kalpurush-default.conf"
 CONFIG_FILE="50-bangla-kalpurush-default.conf"
 DEST_DIR="$HOME/.config/fontconfig/conf.d"
 FONT_DEST_DIR="$HOME/.local/share/fonts/kalpurush"
