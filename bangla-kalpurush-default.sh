@@ -1,7 +1,7 @@
 #!/bin/bash
 # -----------------------------------------------------------------------------
-# Script Name:    bangla-nirmalaui-default.sh
-# Description:    Makes Nirmala UI default font for Bangla similar to Windows 10 for clean UI
+# Script Name:    bangla-kalpurush-default.sh
+# Description:    Makes Kalpurush default font for Bangla for clean UI
 # Author:         @tazihad
 # Website:        https://zihad.com.bd
 # License:        MIT License
@@ -29,10 +29,21 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# Define variables
-CONFIG_URL="https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/50-bangla-nirmalaui-default.conf"
-CONFIG_FILE="50-bangla-nirmalaui-default.conf"
+CONFIG_URL="https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/50-bangla-kalpurush-default.conf"
+CONFIG_FILE="50-bangla-kalpurush-default.conf"
 DEST_DIR="$HOME/.config/fontconfig/conf.d"
+FONT_DEST_DIR="$HOME/.local/share/fonts/kalpurush"
+KALPURUSH_URL="https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/kalpurush.ttf"
+
+# Extracting and installing the Kalpurush font locally
+echo "Installing Kalpurush font to $FONT_DEST_DIR..."
+mkdir -p "$FONT_DEST_DIR"
+if [ -f "kalpurush.ttf" ]; then
+    cp kalpurush.ttf "$FONT_DEST_DIR/kalpurush.ttf"
+else
+    echo "Downloading Kalpurush from $KALPURUSH_URL..."
+    curl -sL "$KALPURUSH_URL" -o "$FONT_DEST_DIR/kalpurush.ttf"
+fi
 
 # Download the fontconfig file
 echo "Downloading fontconfig file from $CONFIG_URL..."
@@ -55,4 +66,4 @@ export LANG=bn_BD.UTF-8
 fc-match
 
 echo "Installed config in $DEST_DIR"
-echo "Nirmala UI is now default font for Bangla."
+echo "Kalpurush is now default font for Bangla."

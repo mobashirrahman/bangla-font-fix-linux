@@ -8,9 +8,9 @@ Open Terminal and copy-paste these commands.
 curl -sSL https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/fonts-bangla-download.sh | sh
 ```
 
-### Make Nirmala UI default Bangla font similar to Windows 10
+### Make Kalpurush default Bangla font
 ```
-curl -sSL https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/bangla-nirmalaui-default.sh | sh
+curl -sSL https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/bangla-kalpurush-default.sh | sh
 ```
 
 ### Download Windows 10 fonts for linux
@@ -32,8 +32,8 @@ Follow these steps to configure fonts for Bengali and Latin text in Firefox:
 3. **Configure Bengali Fonts:**
    - **Fonts for:** Select `Bengali`.
    - **Proportional:** Set to `Serif`, Size to `16`.
-   - **Serif:** Set to `Nirmala UI`.
-   - **Sans-serif:** Set to `Nirmala UI`.
+   - **Serif:** Set to `Kalpurush`.
+   - **Sans-serif:** Set to `Kalpurush`.
    - **Monospace:** Set to `Consolas`, Size to `12`.
    - **Minimum font size:** Leave as `None`.
 
