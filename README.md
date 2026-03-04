@@ -1,5 +1,8 @@
-# bangla-fonts-fix-linux
-**Fix small Bangla fonts problem in linux**  
+# Fix Bangla Font In Linux
+
+Bangla Unicode font parsing in linux is a issue for many Linux Distros. The fonts can break and can have mismatched size compared to the default English fonts.  This repo is a quick fix that solves the problem by installing a popular Bangla font Kalpurush.
+
+## Instruction
 
 Open Terminal and copy-paste these commands.
 
