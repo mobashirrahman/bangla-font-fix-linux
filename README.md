@@ -54,6 +54,24 @@ Follow these steps to configure fonts for Bengali and Latin text in Firefox:
 
 This setup ensures that Bengali text is displayed correctly with the desired fonts and sizes in Firefox.
 
+## Extra Steps for Google Chrome & Microsoft Edge Users
+
+By default, Chrome and Edge on Linux hardcode **Noto Sans Bengali** as the absolute fallback for Bengali text, completely ignoring your generic `sans-serif` settings if a webpage does not specify `<html lang="bn">` (which most don't).
+
+This script **automatically hijacks** Chrome and Edge's hardcoded "Noto Sans Bengali" requests and forces them to use **Kalpurush** instead! You do not need any extensions.
+
+However, for the best experience, you can also set Kalpurush as your standard font:
+
+1. **Open Edge/Chrome Settings:**
+   - Navigate to `edge://settings/fonts` (Edge) or `chrome://settings/fonts` (Chrome).
+
+2. **Set Standard Fonts:**
+   - **Standard font:** Set to `Kalpurush`.
+   - **Serif font:** Set to `Kalpurush`.
+   - **Sans-serif font:** Set to `Kalpurush`.
+
+3. Restart your browser.
+
 More Linux related Tutorials at: https://zihad.com.bd/posts/fix-bangla-fonts-broken-problem-linux/
 
 ### Extra

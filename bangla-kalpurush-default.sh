@@ -33,7 +33,7 @@ CONFIG_URL="https://raw.githubusercontent.com/mobashirrahman/bangla-font-fix-lin
 CONFIG_FILE="50-bangla-kalpurush-default.conf"
 DEST_DIR="$HOME/.config/fontconfig/conf.d"
 FONT_DEST_DIR="$HOME/.local/share/fonts/kalpurush"
-KALPURUSH_URL="https://raw.githubusercontent.com/tazihad/bangla-font-fix-linux/main/kalpurush.ttf"
+KALPURUSH_URL="https://raw.githubusercontent.com/mobashirrahman/bangla-font-fix-linux/main/kalpurush.ttf"
 
 # Extracting and installing the Kalpurush font locally
 echo "Installing Kalpurush font to $FONT_DEST_DIR..."
@@ -55,6 +55,12 @@ mkdir -p "$DEST_DIR"
 # Copy the downloaded file to the destination directory
 echo "Copying $CONFIG_FILE to $DEST_DIR..."
 mv "$CONFIG_FILE" "$DEST_DIR/"
+
+# Remove old Nirmala UI config if it exists
+if [ -f "$DEST_DIR/50-bangla-nirmalaui-default.conf" ]; then
+    echo "Removing old Nirmala UI config..."
+    rm "$DEST_DIR/50-bangla-nirmalaui-default.conf"
+fi
 
 # Refresh font cache (output hidden)
 echo "Refreshing font cache..."
